@@ -1,13 +1,15 @@
 import asyncio
-import aiohttp
 import json
 import re
 from functools import lru_cache
 
-from .idol import Idol
+import aiohttp
+
 from .card import Card
-from .infos import Event, Gacha, Info
 from .enums import enum, rarities
+from .idol import Idol
+from .infos import Event, Gacha, Info
+
 
 class KiraraException(Exception):
     def __init__(self, http_status, code, msg):
@@ -200,7 +202,7 @@ class Kirara:
                 if category == 'event':
                     happening_list.append(Event(event))
                 else:
-                    for gacha, event in enumreate(stuff):
+                    for gacha, event in enumerate(stuff):
                         happening_list.append(Gacha(event))
 
         if en_translate:
