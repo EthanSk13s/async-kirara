@@ -4,7 +4,7 @@ requirements = []
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
-with open("README.md") as f:
+with open("README.MD") as f:
     readme = f.read()
 
 setuptools.setup(name='asyncKirara',
