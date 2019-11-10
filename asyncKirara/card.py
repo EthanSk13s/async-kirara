@@ -29,8 +29,16 @@ class Card:
         self.place = card_data['place']
         self.pose = card_data['pose']
         self.series_id = card_data['series_id']
-        self.skill = Skill(card_data['skill'])
-        self.lead_skill = LeadSkill(card_data['lead_skill'])
+
+        if card_data['skill'] is not None:
+            self.skill = Skill(card_data['skill'])
+        else:
+            self.skill = None
+        if card_data['lead_skill'] is not None:
+            self.lead_skill = LeadSkill(card_data['lead_skill'])
+        else:
+            self.lead_skill = None
+
         self.rarity = card_data['rarity']
 
         self.min_vocal = card_data['vocal_min']
