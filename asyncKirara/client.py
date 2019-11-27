@@ -87,7 +87,7 @@ class Kirara:
                     translations.append(card.skill.name)
                 if card.lead_skill is not None:
                     translations.append(card.lead_skill.name)
-                result = await self.translate(translations)
+                result = await self.translate(tuple(translations))
 
                 for strings, translated in result.items():
                     if translated is None:

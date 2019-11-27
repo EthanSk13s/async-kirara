@@ -10,7 +10,7 @@ with open("README.MD") as f:
 setuptools.setup(name='asyncKirara',
     author='EthanSk13s',
     url='https://github.com/EthanSk13s/async-kirara',
-    version='1.1.0',
+    version='1.2.0',
     packages=['asyncKirara'],
     license='MIT',
     description='an async Python wrapper for the starlight.kirara API',
